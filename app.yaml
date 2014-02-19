@@ -1,0 +1,14 @@
+application: sec-com
+version: 1
+runtime: python
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /files
+  static_dir: files
+
+- url: .*
+  script: main.py
+  secure: always
+
